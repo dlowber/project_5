@@ -6,6 +6,12 @@
  * @author Kerri Shotts
  * @version 1.0.0
  *
+ *    baseNote.js
+ *    @editor David Lowber
+ *    @version 1.0.1
+ *    Updated lines 63-64, 136-151, 254-255, 279-280, 331-333
+ *    Date modified: 3/10/2016
+ *
  * Copyright (c) 2013 Packt Publishing
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this
  * software and associated documentation files (the "Software"), to deal in the Software
@@ -53,7 +59,8 @@ define( [ "yasmf" ], function( _y ) {
     // register the notifications the model can send
     self.registerNotification( "uidChanged" );
     self.registerNotification( "nameChanged" );
-<!---->
+	
+<!--registering the status notification the model can send-->
 	self.registerNotification( "statusChanged" );
     self.registerNotification( "textContentsChanged" );
     self.registerNotification( "mediaContentsChanged" );
@@ -126,7 +133,7 @@ define( [ "yasmf" ], function( _y ) {
       configurable: true
     } );
 	
-<!---->
+<!--Passing the status between views, using a read-write setname and getName-->
 	
 	self._status = "";
     self.getStatus = function() {
@@ -244,7 +251,7 @@ define( [ "yasmf" ], function( _y ) {
         "createdDate": self.createdDate,
         "modifiedDate": self.modifiedDate,
         "name": self.name,
-<!---->
+<!--Serializes the object into a JSON string ready, for saving in storage-->
 		"status": self.status,
         "textContents": self.textContents,
         "mediaContents": self.mediaContents,
@@ -268,7 +275,8 @@ define( [ "yasmf" ], function( _y ) {
         self.uid = aNote.uid;
         self._createdDate = new Date( aNote.createdDate );
         self.name = aNote.name;
-<!---->
+		
+<!--Assigning Values to JSON parse-->
 		self.status =aNote.status;
         self.textContents = aNote.textContents;
         self.mediaContents = aNote.mediaContents;
@@ -320,7 +328,7 @@ define( [ "yasmf" ], function( _y ) {
         if ( typeof options.name !== "undefined" ) {
           self.name = options.name;
         }
-<!---->
+<!--Setting no status option as undefined-->
 		 if ( typeof options.status !== "undefined" ) {
           self.status = options.status;
         }

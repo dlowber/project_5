@@ -24,6 +24,14 @@
 /* General styles */
 
 /* background color */
+.noteListView .ui-list-item .note-status {
+	float: left;
+	margin-left: 20px;
+	padding-bottom: 50px;
+	
+}
+
+
 
 body {
   background-color: #f1eee5;
@@ -438,4 +446,12 @@ body.android {
   background-color: #d7dcd6;
   border-top: 2px solid #484848;
   border-bottom: 2px solid #484848;
+}
+
+.ui-glyph-Archive {
+	background-color: black;
+}
+
+.android .noteListView .ui-list-item .note-representation.ui-glyph-FollowUp {
+	background-color: red;
 }

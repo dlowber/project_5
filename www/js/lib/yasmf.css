@@ -5,6 +5,12 @@
  * @author Kerri Shotts
  * @version 0.4
  *
+ * yasmf.css
+ * @editor David Lowber
+ * @version 0.5
+ * Updated Lines: 915-928
+ * Date Modified: 3/16/2016
+ *
  * Copyright (c) 2013 Kerri Shotts, photoKandy Studios LLC
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this
  * software and associated documentation files (the "Software"), to deal in the Software
@@ -905,6 +911,23 @@ div {
  * Icon Glyphs
  *
  *****************************************************************************/
+ 
+ /*getting image from ysamf-assets for %Status% to match selection, Archive or FollowUp*/
+ .ui-glyph-Archive {
+  -webkit-mask-image: url("./yasmf-assets/file-cabinet-transparent.png");
+  -moz-mask-image: url("./yasmf-assets/file-cabinet-transparent.png");
+  -ms-mask-image: url("./yasmf-assets/file-cabinet-transparent.png");
+  -o-mask-image: url("./yasmf-assets/file-cabinet-transparent.png");
+  mask-image: url("./yasmf-assets/file-cabinet-transparent.png"); }
+
+.ui-glyph-FollowUp {
+  -webkit-mask-image: url("./yasmf-assets/push-pin-transparent.png");
+  -moz-mask-image: url("./yasmf-assets/push-pin-transparent.png");
+  -ms-mask-image: url("./yasmf-assets/push-pin-transparent.png");
+  -o-mask-image: url("./yasmf-assets/push-pin-transparent.png");
+  mask-image: url("./yasmf-assets/push-pin-transparent.png"); }
+  
+  
 .ui-glyph-arrow-corners-inward {
   -webkit-mask-image: url("./yasmf-assets/arrow-corners-inward@2x.png");
   -moz-mask-image: url("./yasmf-assets/arrow-corners-inward@2x.png");

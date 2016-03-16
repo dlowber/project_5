@@ -6,6 +6,12 @@
  * @author Kerri Shotts
  * @version 1.0.0
  *
+ *    imageNoteEditView.js
+ *    @editor David Lowber
+ *    @version 1.0.1
+ *    Updated lines 66-67
+ *    Date modified: 3/10/2016
+ *
  * Copyright (c) 2013 Packt Publishing
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this
  * software and associated documentation files (the "Software"), to deal in the Software
@@ -63,7 +69,7 @@ define( [ "yasmf", "app/models/noteStorageSingleton",
       return _y.template( imageNoteViewHTML, {
         "NOTE_NAME": self._note.name,
 		
-<!---->
+<!--Saving the status from textNoteEditView.html as note.status-->
 		"STATUS": self._note.status,
         "NOTE_CONTENTS": self._note.textContents,
         "BACK": _y.T( "BACK" ),

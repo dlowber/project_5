@@ -6,6 +6,12 @@
  * @author Kerri Shotts
  * @version 2.0.0
  *
+ *    textNoteEditView.js
+ *    @editor David Lowber
+ *    @version 1.0.1
+ *    Updated lines 62-63, 76-77, 125-126, 141-142
+ *    Date modified: 3/10/2016
+ *
  * Copyright (c) 2013 Packt Publishing
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this
  * software and associated documentation files (the "Software"), to deal in the Software
@@ -53,7 +59,7 @@ define( [ "yasmf", "app/models/noteStorageSingleton",
     // our internal pointers to specific elements
     self._navigationBar = null;
     self._nameEditor = null;
-<!---->
+<!--Add internal pointer to status editor element-->
 	self._statusEditor = null;
     self._scrollContainer = null;
     self._contentsEditor = null;
@@ -67,7 +73,7 @@ define( [ "yasmf", "app/models/noteStorageSingleton",
      */
     self.saveNote = function() {
       self._note.name = self._nameEditor.innerText;
-<!----> 
+<!--Saving the status by copying the value--> 
 	  self._note.status = self._statusEditor.value;
       self._note.textContents = self._contentsEditor.value;
       noteStorageSingleton.saveNote( self._note );
@@ -116,6 +122,8 @@ define( [ "yasmf", "app/models/noteStorageSingleton",
       // no need to call super; it's abstract
       return _y.template( textNoteEditViewHTML, {
         "NOTE_NAME": self._note.name,
+		
+<!--Saving the status from textNoteEditView.html as note.status-->
 		"STATUS": self._note.status,
         "NOTE_CONTENTS": self._note.textContents,
         "BACK": _y.T( "BACK" ),
@@ -132,7 +140,7 @@ define( [ "yasmf", "app/models/noteStorageSingleton",
       self._navigationBar = self.element.querySelector( ".ui-navigation-bar" );
       self._nameEditor = self.element.querySelector( ".ui-navigation-bar .ui-title" );
 	  
-<!---->
+<!--Finding the saved status from line 77, and adding value from textNoteEditView.html-->
 	  self._statusEditor = self.element.querySelector( ".ui-navigation-bar .txtnote-drop-status" );
       self._backButton = self.element.querySelector(
         ".ui-navigation-bar .ui-bar-button-group.ui-align-left .ui-back-button" );
